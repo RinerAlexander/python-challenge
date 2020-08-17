@@ -2,7 +2,7 @@ import os
 import csv
 
 csvpath = os.path.join('Resources', 'budget_data.csv')
-
+outputpath = os.path.join('analysis', 'output.txt')
 content=[]
 totalMonths=0
 totalProfit=0
@@ -33,5 +33,8 @@ f"Greatest Increase in Profits: {grtInMonth} ({grtIncrease})",
 f"Greatest Decrease in Profits: {grtDeMonth} ({grtDecrease})"]
 for line in output:
     print(line)
-    
+    txtOutput = open(outputpath,"a") 
+    txtOutput.write(line+"\n")
+    txtOutput.close() 
+
     
