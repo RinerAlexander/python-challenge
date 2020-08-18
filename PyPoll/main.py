@@ -15,7 +15,7 @@ with open(csvpath, 'r') as csvfile:
 for row in content:
     candidate=row[2]
     if candidate in voteDict:
-        voteDict={candidate:voteDict[candidate]+1}
+        voteDict[candidate]=voteDict[candidate]+1
     else:
-        voteDict={candidate:1}
+        voteDict[candidate]=1
 print(voteDict)

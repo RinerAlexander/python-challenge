@@ -37,4 +37,3 @@ for line in output:
     txtOutput.write(line+"\n")
     txtOutput.close() 
 
-    
