@@ -25,5 +25,9 @@ for row in content:
 for candidate in voteDict:
     if not(winner):
         winner=candidate
+    else:
+        if voteDict[candidate]>voteDict[winner]:
+            winner=candidate
+
 print(winner)
 
