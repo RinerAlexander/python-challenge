@@ -35,7 +35,13 @@ for candidate in voteDict:
 output=["Election Results","-------------------------",f"Total Votes: {total}",
 "-------------------------","-------------------------",f"Winner: {winner}",
 "-------------------------"]
-
 output[4:4]=results
-print(output)
+
+for line in output:
+    print(line)
+    txtOutput = open(outputpath,"a") 
+    txtOutput.write(line+"\n")
+    txtOutput.close() 
+
+
 
