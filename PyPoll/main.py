@@ -24,7 +24,7 @@ for row in content:
 
 results=[]
 for candidate in voteDict:
-    results.append(f"{candidate}: {voteDict[candidate]/total*100}% ({voteDict[candidate]})")
+    results.append(f"{candidate}: {round(voteDict[candidate]/total*100,3)}% ({voteDict[candidate]})")
     if not(winner):
         winner=candidate
     else:
