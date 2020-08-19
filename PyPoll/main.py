@@ -22,12 +22,15 @@ for row in content:
     else:
         voteDict[candidate]=1
 
+results=[]
 for candidate in voteDict:
+    results.append(f"{candidate}: {voteDict[candidate]/total*100}% ({voteDict[candidate]})")
     if not(winner):
         winner=candidate
     else:
         if voteDict[candidate]>voteDict[winner]:
             winner=candidate
 
-print(winner)
 
+
+print(results)
