@@ -32,5 +32,10 @@ for candidate in voteDict:
             winner=candidate
 
 
+output=["Election Results","-------------------------",f"Total Votes: {total}",
+"-------------------------","-------------------------",f"Winner: {winner}",
+"-------------------------"]
 
-print(results)
+output[4:4]=results
+print(output)
+
